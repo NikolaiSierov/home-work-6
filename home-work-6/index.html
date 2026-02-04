@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS Лабораторна</title>
+
+  <!-- RESET -->
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial;
+      padding:20px;
+      line-height:1.6;
+    }
+
+    section{
+      border:2px solid #333;
+      padding:15px;
+      margin-bottom:30px;
+    }
+
+    h2{
+      background:#eee;
+      padding:10px;
+      margin-bottom:15px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<h1>Лабораторна робота HTML + CSS</h1>
+
+<!-- 1. DIV + SPAN -->
+<section>
+
+  <h2>1. Блокові та інлайнові елементи</h2>
+
+  <div style="background:lightblue;padding:10px;margin:10px;">
+    Це блок div
+  </div>
+
+  <div style="background:lightgreen;padding:10px;margin:10px;">
+    Тут є <span style="color:red;font-weight:bold;">span</span> у тексті
+  </div>
+
+  <p>
+    Текст з <span style="color:blue;">інлайновим</span> елементом.
+  </p>
+
+</section>
+
+
+<!-- 2. NORMALIZE / RESET -->
+<section>
+
+  <h2>2. Normalize та Reset</h2>
+
+  <p>
+    Під час експерименту з normalize.css та reset.css я побачив,
+    що normalize зберігає базові стилі браузера,
+    а reset повністю їх скидає.
+  </p>
+
+  <ul>
+    <li>Пункт 1</li>
+    <li>Пункт 2</li>
+  </ul>
+
+</section>
+
+
+<!-- 3. DISPLAY + BOX SIZING -->
+<section>
+
+  <h2>3. Display та Box-sizing</h2>
+
+  <style>
+
+    .inline{
+      display:inline;
+      background:orange;
+      padding:10px;
+    }
+
+    .block{
+      display:block;
+      background:lightcoral;
+      padding:10px;
+      margin:5px 0;
+    }
+
+    .flex{
+      display:flex;
+      gap:10px;
+    }
+
+    .flex div{
+      background:lightseagreen;
+      padding:15px;
+    }
+
+    .box-sizing{
+      width:200px;
+      padding:20px;
+      border:5px solid black;
+      box-sizing:border-box;
+      background:khaki;
+    }
+
+  </style>
+
+  <div class="inline">Inline</div>
+  <div class="inline">Inline</div>
+
+  <div class="block">Block</div>
+
+  <h3>Flex</h3>
+
+  <div class="flex">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>Box-sizing</h3>
+
+  <div class="box-sizing">
+    Border-box
+  </div>
+
+</section>
+
+
+<!-- 4. FLOAT + CLEAR -->
+<section>
+
+  <h2>4. Float та Clear</h2>
+
+  <style>
+
+    .float-box{
+      width:80px;
+      height:80px;
+      background:lightpink;
+      float:left;
+      margin:10px;
+      text-align:center;
+      line-height:80px;
+    }
+
+    .clear{
+      clear:both;
+    }
+
+  </style>
+
+  <div class="float-box">1</div>
+  <div class="float-box">2</div>
+  <div class="float-box">3</div>
+
+  <p>
+    Текст обтікає блоки
+  </p>
+
+  <div class="clear"></div>
+
+  <p>
+    Текст після clear
+  </p>
+
+</section>
+
+
+<!-- 5. OVERFLOW -->
+<section>
+
+  <h2>5. Overflow</h2>
+
+  <style>
+
+    .overflow{
+      width:200px;
+      height:100px;
+      border:2px solid black;
+      overflow:auto;
+      padding:5px;
+    }
+
+  </style>
+
+  <div class="overflow">
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Lorem ipsum dolor sit amet.
+
+  </div>
+
+</section>
+
+
+<!-- 6. POSITION -->
+<section>
+
+  <h2>6. Position</h2>
+
+  <style>
+
+    .position-box{
+      width:100px;
+      height:100px;
+      background:lightblue;
+      margin:10px;
+      text-align:center;
+      line-height:100px;
+    }
+
+    .relative{
+      position:relative;
+      left:20px;
+      top:10px;
+      background:orange;
+    }
+
+    .parent{
+      position:relative;
+      height:200px;
+      border:2px solid black;
+    }
+
+    .absolute{
+      position:absolute;
+      right:10px;
+      top:10px;
+      background:lightgreen;
+    }
+
+    .fixed{
+      position:fixed;
+      bottom:10px;
+      right:10px;
+      background:red;
+      color:white;
+    }
+
+    .sticky{
+      position:sticky;
+      top:0;
+      background:green;
+      color:white;
+      padding:5px;
+    }
+
+  </style>
+
+  <div class="sticky">Sticky</div>
+
+  <div class="position-box">Static</div>
+
+  <div class="position-box relative">Relative</div>
+
+  <div class="parent">
+
+    Parent
+
+    <div class="position-box absolute">Absolute</div>
+
+  </div>
+
+  <div class="position-box fixed">Fixed</div>
+
+</section>
+
+
+</body>
+</html>
